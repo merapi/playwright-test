@@ -17,10 +17,10 @@ jobs:
       uses: microsoft/playwright-github-action@v1.1.0
 
     - name: Cache browsers
-        uses: actions/cache@v1
-        with:
-          path: '~/.cache/ms-playwright/'
-          key: ${{ runner.os }}-browsers
+      uses: actions/cache@v1
+      with:
+        path: '~/.cache/ms-playwright/'
+        key: ${{ runner.os }}-browsers
 
     - name: Install dependencies and run tests
       run: npm install && npm test
