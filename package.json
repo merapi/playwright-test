@@ -1,0 +1,22 @@
+{
+  "name": "playwright-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merapi/playwright-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/merapi/playwright-test/issues"
+  },
+  "homepage": "https://github.com/merapi/playwright-test#readme",
+  "devDependencies": {
+    "playwright": "^0.17.0"
+  }
+}

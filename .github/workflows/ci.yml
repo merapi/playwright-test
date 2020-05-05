@@ -26,3 +26,7 @@ jobs:
     - name: Playwright GitHub Action
       uses: microsoft/playwright-github-action@v1.1.0
 
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifacts
+        path: artifacts/
