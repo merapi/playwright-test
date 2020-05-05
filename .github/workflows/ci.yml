@@ -16,8 +16,17 @@ jobs:
     - name: Playwright GitHub Action
       uses: microsoft/playwright-github-action@v1.1.0
 
+    - name: Cache browsers
+        uses: actions/cache@v1
+        with:
+          path: '~/.cache/ms-playwright/'
+          key: ${{ runner.os }}-browsers
+
     - name: Install dependencies and run tests
       run: npm install && npm test
+
+    - name: Check browsers
+        run: ls -alh ~/.cache/ms-playwright/
 
     - uses: actions/upload-artifact@v2
       with:
