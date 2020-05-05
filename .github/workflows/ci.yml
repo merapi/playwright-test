@@ -13,15 +13,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
 
     - name: Playwright GitHub Action
       uses: microsoft/playwright-github-action@v1.1.0
 
-    - name: Cache browsers
-      uses: actions/cache@v1
-      with:
-        path: '~/.cache/ms-playwright/'
-        key: ${{ runner.os }}-browsers
+#    - name: Cache browsers
+#      uses: actions/cache@v1
+#      with:
+#        path: '~/.cache/ms-playwright/'
+#        key: ${{ runner.os }}-browsers
 
     - name: Setup
       run: mkdir artifacts
