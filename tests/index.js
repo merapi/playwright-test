@@ -6,7 +6,7 @@ try {
             const browser = await playwright[browserType].launch();
             const context = await browser.newContext();
             const page = await context.newPage();
-            await page.goto('about:gpu');
+            await page.goto('chrome://gpu/');
             await page.screenshot({path: `./artifacts/example-${browserType}.png`});
             await browser.close();
         }
