@@ -7,7 +7,8 @@ try {
             const context = await browser.newContext();
             const page = await context.newPage();
             await page.goto('chrome://gpu/');
-            await page.screenshot({path: `./artifacts/example-${browserType}.png`});
+            await page.waitFor(5000);
+            await page.screenshot({path: `./artifacts/example-${browserType}.png`, fullPage: true });
             await browser.close();
         }
     })();
